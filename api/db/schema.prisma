@@ -16,3 +16,18 @@ model User {
   username String  @unique
   password  String?
 }
+
+model Education {
+  id    Int     @id @default(autoincrement())
+  logo  String?
+  title String?
+  description String?
+  fromYear String?
+  toYear String?
+}
+
+model Setting {
+  id    Int     @id @default(autoincrement())
+  key  String?
+  value String?
+}
