@@ -59,6 +59,23 @@ const ImageForm = (props) => {
         <FieldError name="background_position" className="rw-field-error" />
 
         <Label
+          name="category"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Category
+        </Label>
+
+        <TextField
+          name="category"
+          defaultValue={props.image?.category}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="category" className="rw-field-error" />
+
+        <Label
           name="active"
           className="rw-label"
           errorClassName="rw-label rw-label-error"

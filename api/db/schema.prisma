@@ -36,6 +36,7 @@ model Image {
   id    Int     @id @default(autoincrement())
   image_url String?
   background_position String?
+  category String?
   active Boolean
   sort Int @default(0)
 }
@@ -44,6 +45,20 @@ model Skill {
   id    Int     @id @default(autoincrement())
   name String?
   degree String?
+  percent Int?
+  category String?
+  active Boolean
+  sort Int @default(0)
+}
+
+model Experience {
+  id    Int     @id @default(autoincrement())
+  title String?
+  logo String?
+  fromDateTime DateTime?
+  toDateTime DateTime?
+  location String?
+  description String?
   percent Int?
   category String?
   active Boolean

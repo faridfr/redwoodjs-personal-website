@@ -42,6 +42,7 @@ const ImagesList = ({ images }) => {
             <th>Id</th>
             <th>Image url</th>
             <th>Background position</th>
+            <th>Category</th>
             <th>Active</th>
             <th>Sort</th>
             <th>&nbsp;</th>
@@ -53,6 +54,7 @@ const ImagesList = ({ images }) => {
               <td>{truncate(image.id)}</td>
               <td>{truncate(image.image_url)}</td>
               <td>{truncate(image.background_position)}</td>
+              <td>{truncate(image.category)}</td>
               <td>{checkboxInputTag(image.active)}</td>
               <td>{truncate(image.sort)}</td>
               <td>

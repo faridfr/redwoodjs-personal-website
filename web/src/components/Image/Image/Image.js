@@ -52,6 +52,10 @@ const Image = ({ image }) => {
               <td>{image.background_position}</td>
             </tr>
             <tr>
+              <th>Category</th>
+              <td>{image.category}</td>
+            </tr>
+            <tr>
               <th>Active</th>
               <td>{checkboxInputTag(image.active)}</td>
             </tr>

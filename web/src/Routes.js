@@ -14,6 +14,12 @@ import ScaffoldLayout from 'src/layouts/ScaffoldLayout'
 const Routes = () => {
   return (
     <Router>
+      <Set wrap={ScaffoldLayout} title="Images" titleTo="images" buttonLabel="New Image" buttonTo="newImage">
+        <Route path="/images/new" page={ImageNewImagePage} name="newImage" />
+        <Route path="/images/{id:Int}/edit" page={ImageEditImagePage} name="editImage" />
+        <Route path="/images/{id:Int}" page={ImageImagePage} name="image" />
+        <Route path="/images" page={ImageImagesPage} name="images" />
+      </Set>
       <Set wrap={ScaffoldLayout} title="Skills" titleTo="skills" buttonLabel="New Skill" buttonTo="newSkill">
         <Route path="/skills/new" page={SkillNewSkillPage} name="newSkill" />
         <Route path="/skills/{id:Int}/edit" page={SkillEditSkillPage} name="editSkill" />
@@ -21,10 +27,6 @@ const Routes = () => {
         <Route path="/skills" page={SkillSkillsPage} name="skills" />
       </Set>
       <Set wrap={ScaffoldLayout} title="Images" titleTo="images" buttonLabel="New Image" buttonTo="newImage">
-        <Route path="/images/new" page={ImageNewImagePage} name="newImage" />
-        <Route path="/images/{id:Int}/edit" page={ImageEditImagePage} name="editImage" />
-        <Route path="/images/{id:Int}" page={ImageImagePage} name="image" />
-        <Route path="/images" page={ImageImagesPage} name="images" />
       </Set>
       <Set wrap={ScaffoldLayout} title="Settings" titleTo="settings" buttonLabel="New Setting" buttonTo="newSetting">
         <Route path="/settings/new" page={SettingNewSettingPage} name="newSetting" />

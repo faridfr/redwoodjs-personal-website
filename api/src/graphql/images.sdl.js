@@ -3,6 +3,7 @@ export const schema = gql`
     id: Int!
     image_url: String
     background_position: String
+    category: String
     active: Boolean!
     sort: Int!
   }
@@ -15,6 +16,7 @@ export const schema = gql`
   input CreateImageInput {
     image_url: String
     background_position: String
+    category: String
     active: Boolean!
     sort: Int!
   }
@@ -22,6 +24,7 @@ export const schema = gql`
   input UpdateImageInput {
     image_url: String
     background_position: String
+    category: String
     active: Boolean
     sort: Int
   }

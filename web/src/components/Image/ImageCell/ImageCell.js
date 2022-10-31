@@ -6,6 +6,7 @@ export const QUERY = gql`
       id
       image_url
       background_position
+      category
       active
       sort
     }
