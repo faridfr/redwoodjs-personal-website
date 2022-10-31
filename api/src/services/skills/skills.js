@@ -28,3 +28,9 @@ export const deleteSkill = ({ id }) => {
     where: { id },
   })
 }
+
+export const Skill = {
+  image: (_obj, { root }) => {
+    return db.skill.findUnique({ where: { id: root?.id } }).image()
+  },
+}

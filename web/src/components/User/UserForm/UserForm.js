@@ -4,6 +4,7 @@ import {
   FieldError,
   Label,
   TextField,
+  NumberField,
   Submit,
 } from '@redwoodjs/forms'
 
@@ -56,6 +57,40 @@ const UserForm = (props) => {
         />
 
         <FieldError name="password" className="rw-field-error" />
+
+        <Label
+          name="role"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Role
+        </Label>
+
+        <TextField
+          name="role"
+          defaultValue={props.user?.role}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="role" className="rw-field-error" />
+
+        <Label
+          name="imageId"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Image id
+        </Label>
+
+        <NumberField
+          name="imageId"
+          defaultValue={props.user?.imageId}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="imageId" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

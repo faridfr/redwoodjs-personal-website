@@ -6,6 +6,10 @@ export const schema = gql`
     category: String
     active: Boolean!
     sort: Int!
+    User: [User]!
+    Education: [Education]!
+    Skill: [Skill]!
+    Experience: [Experience]!
   }
 
   type Query {

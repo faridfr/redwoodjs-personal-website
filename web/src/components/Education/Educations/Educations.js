@@ -40,11 +40,11 @@ const EducationsList = ({ educations }) => {
         <thead>
           <tr>
             <th>Id</th>
-            <th>Logo</th>
             <th>Title</th>
             <th>Description</th>
             <th>From year</th>
             <th>To year</th>
+            <th>Image id</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -52,11 +52,11 @@ const EducationsList = ({ educations }) => {
           {educations.map((education) => (
             <tr key={education.id}>
               <td>{truncate(education.id)}</td>
-              <td>{truncate(education.logo)}</td>
               <td>{truncate(education.title)}</td>
               <td>{truncate(education.description)}</td>
               <td>{truncate(education.fromYear)}</td>
               <td>{truncate(education.toYear)}</td>
+              <td>{truncate(education.imageId)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

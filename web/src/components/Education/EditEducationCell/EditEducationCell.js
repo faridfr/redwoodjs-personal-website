@@ -9,11 +9,11 @@ export const QUERY = gql`
   query EditEducationById($id: Int!) {
     education: education(id: $id) {
       id
-      logo
       title
       description
       fromYear
       toYear
+      imageId
     }
   }
 `
@@ -21,11 +21,11 @@ const UPDATE_EDUCATION_MUTATION = gql`
   mutation UpdateEducationMutation($id: Int!, $input: UpdateEducationInput!) {
     updateEducation(id: $id, input: $input) {
       id
-      logo
       title
       description
       fromYear
       toYear
+      imageId
     }
   }
 `

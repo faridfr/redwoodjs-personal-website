@@ -5,13 +5,20 @@ import {
   Label,
   TextField,
   NumberField,
+  DatetimeLocalField,
   CheckboxField,
   Submit,
 } from '@redwoodjs/forms'
 
-const SkillForm = (props) => {
+const formatDatetime = (value) => {
+  if (value) {
+    return value.replace(/:\d{2}\.\d{3}\w/, '')
+  }
+}
+
+const ExperienceForm = (props) => {
   const onSubmit = (data) => {
-    props.onSave(data, props?.skill?.id)
+    props.onSave(data, props?.experience?.id)
   }
 
   return (
@@ -25,38 +32,106 @@ const SkillForm = (props) => {
         />
 
         <Label
-          name="name"
+          name="title"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          Name
+          Title
         </Label>
 
         <TextField
-          name="name"
-          defaultValue={props.skill?.name}
+          name="title"
+          defaultValue={props.experience?.title}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
 
-        <FieldError name="name" className="rw-field-error" />
+        <FieldError name="title" className="rw-field-error" />
 
         <Label
-          name="degree"
+          name="imageId"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          Degree
+          Image id
         </Label>
 
-        <TextField
-          name="degree"
-          defaultValue={props.skill?.degree}
+        <NumberField
+          name="imageId"
+          defaultValue={props.experience?.imageId}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
 
-        <FieldError name="degree" className="rw-field-error" />
+        <FieldError name="imageId" className="rw-field-error" />
+
+        <Label
+          name="fromDateTime"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          From date time
+        </Label>
+
+        <DatetimeLocalField
+          name="fromDateTime"
+          defaultValue={formatDatetime(props.experience?.fromDateTime)}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="fromDateTime" className="rw-field-error" />
+
+        <Label
+          name="toDateTime"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          To date time
+        </Label>
+
+        <DatetimeLocalField
+          name="toDateTime"
+          defaultValue={formatDatetime(props.experience?.toDateTime)}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="toDateTime" className="rw-field-error" />
+
+        <Label
+          name="location"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Location
+        </Label>
+
+        <TextField
+          name="location"
+          defaultValue={props.experience?.location}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="location" className="rw-field-error" />
+
+        <Label
+          name="description"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Description
+        </Label>
+
+        <TextField
+          name="description"
+          defaultValue={props.experience?.description}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="description" className="rw-field-error" />
 
         <Label
           name="percent"
@@ -68,7 +143,7 @@ const SkillForm = (props) => {
 
         <NumberField
           name="percent"
-          defaultValue={props.skill?.percent}
+          defaultValue={props.experience?.percent}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
@@ -85,7 +160,7 @@ const SkillForm = (props) => {
 
         <TextField
           name="category"
-          defaultValue={props.skill?.category}
+          defaultValue={props.experience?.category}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
@@ -102,7 +177,7 @@ const SkillForm = (props) => {
 
         <CheckboxField
           name="active"
-          defaultChecked={props.skill?.active}
+          defaultChecked={props.experience?.active}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
@@ -119,30 +194,13 @@ const SkillForm = (props) => {
 
         <NumberField
           name="sort"
-          defaultValue={props.skill?.sort}
+          defaultValue={props.experience?.sort}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
         />
 
         <FieldError name="sort" className="rw-field-error" />
-
-        <Label
-          name="imageId"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Image id
-        </Label>
-
-        <NumberField
-          name="imageId"
-          defaultValue={props.skill?.imageId}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="imageId" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
@@ -154,4 +212,4 @@ const SkillForm = (props) => {
   )
 }
 
-export default SkillForm
+export default ExperienceForm

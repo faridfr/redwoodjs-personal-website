@@ -51,6 +51,14 @@ const User = ({ user }) => {
               <th>Password</th>
               <td>{user.password}</td>
             </tr>
+            <tr>
+              <th>Role</th>
+              <td>{user.role}</td>
+            </tr>
+            <tr>
+              <th>Image id</th>
+              <td>{user.imageId}</td>
+            </tr>
           </tbody>
         </table>
       </div>

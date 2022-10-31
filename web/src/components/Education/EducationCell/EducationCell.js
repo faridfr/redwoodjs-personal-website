@@ -4,11 +4,11 @@ export const QUERY = gql`
   query FindEducationById($id: Int!) {
     education: education(id: $id) {
       id
-      logo
       title
       description
       fromYear
       toYear
+      imageId
     }
   }
 `

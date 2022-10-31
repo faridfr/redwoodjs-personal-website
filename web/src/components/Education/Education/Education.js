@@ -44,10 +44,6 @@ const Education = ({ education }) => {
               <td>{education.id}</td>
             </tr>
             <tr>
-              <th>Logo</th>
-              <td>{education.logo}</td>
-            </tr>
-            <tr>
               <th>Title</th>
               <td>{education.title}</td>
             </tr>
@@ -62,6 +58,10 @@ const Education = ({ education }) => {
             <tr>
               <th>To year</th>
               <td>{education.toYear}</td>
+            </tr>
+            <tr>
+              <th>Image id</th>
+              <td>{education.imageId}</td>
             </tr>
           </tbody>
         </table>

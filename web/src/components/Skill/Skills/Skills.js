@@ -46,6 +46,7 @@ const SkillsList = ({ skills }) => {
             <th>Category</th>
             <th>Active</th>
             <th>Sort</th>
+            <th>Image id</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -59,6 +60,7 @@ const SkillsList = ({ skills }) => {
               <td>{truncate(skill.category)}</td>
               <td>{checkboxInputTag(skill.active)}</td>
               <td>{truncate(skill.sort)}</td>
+              <td>{truncate(skill.imageId)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

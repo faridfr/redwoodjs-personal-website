@@ -12,55 +12,66 @@ generator client {
 // to create migrations for them and apply to your dev DB.
 // TODO: Please remove the following example:
 model User {
-  id    Int     @id @default(autoincrement())
+  id       Int     @id @default(autoincrement())
   username String  @unique
-  password  String?
+  password String?
+  role     String?
+  image    Image?  @relation(fields: [imageId], references: [id])
+  imageId  Int?
 }
 
 model Education {
-  id    Int     @id @default(autoincrement())
-  logo  String?
-  title String?
+  id          Int     @id @default(autoincrement())
+  title       String?
   description String?
-  fromYear String?
-  toYear String?
+  fromYear    String?
+  toYear      String?
+  image       Image?  @relation(fields: [imageId], references: [id])
+  imageId     Int?
 }
 
 model Setting {
   id    Int     @id @default(autoincrement())
-  key  String?
+  key   String?
   value String?
 }
 
 model Image {
-  id    Int     @id @default(autoincrement())
-  image_url String?
+  id                  Int          @id @default(autoincrement())
+  image_url           String?
   background_position String?
-  category String?
-  active Boolean
-  sort Int @default(0)
+  category            String?
+  active              Boolean
+  sort                Int          @default(0)
+  User                User[]
+  Education           Education[]
+  Skill               Skill[]
+  Experience          Experience[]
 }
 
 model Skill {
-  id    Int     @id @default(autoincrement())
-  name String?
-  degree String?
-  percent Int?
+  id       Int     @id @default(autoincrement())
+  name     String?
+  degree   String?
+  percent  Int?
   category String?
-  active Boolean
-  sort Int @default(0)
+  active   Boolean
+  sort     Int     @default(0)
+  image    Image?  @relation(fields: [imageId], references: [id])
+  imageId  Int?
 }
 
 model Experience {
-  id    Int     @id @default(autoincrement())
-  title String?
-  logo String?
+  id           Int       @id @default(autoincrement())
+  title        String?
+  image        Image?    @relation(fields: [imageId], references: [id])
+  imageId      Int?
   fromDateTime DateTime?
-  toDateTime DateTime?
-  location String?
-  description String?
-  percent Int?
-  category String?
-  active Boolean
-  sort Int @default(0)
+  toDateTime   DateTime?
+  location     String?
+  description  String?
+  percent      Int?
+  category     String?
+  active       Boolean
+  sort         Int       @default(0)
 }

@@ -15,6 +15,7 @@ export const QUERY = gql`
       category
       active
       sort
+      imageId
     }
   }
 `
@@ -28,6 +29,7 @@ const UPDATE_SKILL_MUTATION = gql`
       category
       active
       sort
+      imageId
     }
   }
 `

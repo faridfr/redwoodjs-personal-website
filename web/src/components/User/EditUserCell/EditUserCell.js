@@ -11,6 +11,8 @@ export const QUERY = gql`
       id
       username
       password
+      role
+      imageId
     }
   }
 `
@@ -20,6 +22,8 @@ const UPDATE_USER_MUTATION = gql`
       id
       username
       password
+      role
+      imageId
     }
   }
 `

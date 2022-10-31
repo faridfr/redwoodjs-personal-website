@@ -28,3 +28,18 @@ export const deleteImage = ({ id }) => {
     where: { id },
   })
 }
+
+export const Image = {
+  User: (_obj, { root }) => {
+    return db.image.findUnique({ where: { id: root?.id } }).User()
+  },
+  Education: (_obj, { root }) => {
+    return db.image.findUnique({ where: { id: root?.id } }).Education()
+  },
+  Skill: (_obj, { root }) => {
+    return db.image.findUnique({ where: { id: root?.id } }).Skill()
+  },
+  Experience: (_obj, { root }) => {
+    return db.image.findUnique({ where: { id: root?.id } }).Experience()
+  },
+}

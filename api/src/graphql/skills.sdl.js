@@ -7,6 +7,8 @@ export const schema = gql`
     category: String
     active: Boolean!
     sort: Int!
+    image: Image
+    imageId: Int
   }
 
   type Query {
@@ -21,6 +23,7 @@ export const schema = gql`
     category: String
     active: Boolean!
     sort: Int!
+    imageId: Int
   }
 
   input UpdateSkillInput {
@@ -30,6 +33,7 @@ export const schema = gql`
     category: String
     active: Boolean
     sort: Int
+    imageId: Int
   }
 
   type Mutation {

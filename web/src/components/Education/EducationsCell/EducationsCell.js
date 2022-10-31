@@ -6,11 +6,11 @@ export const QUERY = gql`
   query FindEducations {
     educations {
       id
-      logo
       title
       description
       fromYear
       toYear
+      imageId
     }
   }
 `

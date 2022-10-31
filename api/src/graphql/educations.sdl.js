@@ -1,11 +1,12 @@
 export const schema = gql`
   type Education {
     id: Int!
-    logo: String
     title: String
     description: String
     fromYear: String
     toYear: String
+    image: Image
+    imageId: Int
   }
 
   type Query {
@@ -14,19 +15,19 @@ export const schema = gql`
   }
 
   input CreateEducationInput {
-    logo: String
     title: String
     description: String
     fromYear: String
     toYear: String
+    imageId: Int
   }
 
   input UpdateEducationInput {
-    logo: String
     title: String
     description: String
     fromYear: String
     toYear: String
+    imageId: Int
   }
 
   type Mutation {

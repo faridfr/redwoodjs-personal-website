@@ -67,6 +67,10 @@ const Skill = ({ skill }) => {
               <th>Sort</th>
               <td>{skill.sort}</td>
             </tr>
+            <tr>
+              <th>Image id</th>
+              <td>{skill.imageId}</td>
+            </tr>
           </tbody>
         </table>
       </div>

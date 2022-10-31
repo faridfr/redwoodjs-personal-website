@@ -8,6 +8,8 @@ export const QUERY = gql`
       id
       username
       password
+      role
+      imageId
     }
   }
 `

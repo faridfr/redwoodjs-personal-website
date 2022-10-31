@@ -28,3 +28,9 @@ export const deleteEducation = ({ id }) => {
     where: { id },
   })
 }
+
+export const Education = {
+  image: (_obj, { root }) => {
+    return db.education.findUnique({ where: { id: root?.id } }).image()
+  },
+}

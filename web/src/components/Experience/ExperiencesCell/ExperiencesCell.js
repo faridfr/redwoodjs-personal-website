@@ -1,18 +1,21 @@
 import { Link, routes } from '@redwoodjs/router'
 
-import Skills from 'src/components/Skill/Skills'
+import Experiences from 'src/components/Experience/Experiences'
 
 export const QUERY = gql`
-  query FindSkills {
-    skills {
+  query FindExperiences {
+    experiences {
       id
-      name
-      degree
+      title
+      imageId
+      fromDateTime
+      toDateTime
+      location
+      description
       percent
       category
       active
       sort
-      imageId
     }
   }
 `
@@ -22,8 +25,8 @@ export const Loading = () => <div>Loading...</div>
 export const Empty = () => {
   return (
     <div className="rw-text-center">
-      {'No skills yet. '}
-      <Link to={routes.newSkill()} className="rw-link">
+      {'No experiences yet. '}
+      <Link to={routes.newExperience()} className="rw-link">
         {'Create one?'}
       </Link>
     </div>
@@ -34,6 +37,6 @@ export const Failure = ({ error }) => (
   <div className="rw-cell-error">{error?.message}</div>
 )
 
-export const Success = ({ skills }) => {
-  return <Skills skills={skills} />
+export const Success = ({ experiences }) => {
+  return <Experiences experiences={experiences} />
 }

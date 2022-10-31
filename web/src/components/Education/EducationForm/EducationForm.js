@@ -4,6 +4,7 @@ import {
   FieldError,
   Label,
   TextField,
+  NumberField,
   Submit,
 } from '@redwoodjs/forms'
 
@@ -21,23 +22,6 @@ const EducationForm = (props) => {
           titleClassName="rw-form-error-title"
           listClassName="rw-form-error-list"
         />
-
-        <Label
-          name="logo"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Logo
-        </Label>
-
-        <TextField
-          name="logo"
-          defaultValue={props.education?.logo}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="logo" className="rw-field-error" />
 
         <Label
           name="title"
@@ -106,6 +90,23 @@ const EducationForm = (props) => {
         />
 
         <FieldError name="toYear" className="rw-field-error" />
+
+        <Label
+          name="imageId"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Image id
+        </Label>
+
+        <NumberField
+          name="imageId"
+          defaultValue={props.education?.imageId}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="imageId" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
