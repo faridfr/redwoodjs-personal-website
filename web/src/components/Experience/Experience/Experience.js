@@ -2,7 +2,7 @@ import { Link, routes, navigate } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
-import { checkboxInputTag, timeTag } from 'src/lib/formatters'
+import { checkboxInputTag } from 'src/lib/formatters'
 
 const DELETE_EXPERIENCE_MUTATION = gql`
   mutation DeleteExperienceMutation($id: Int!) {
@@ -52,12 +52,12 @@ const Experience = ({ experience }) => {
               <td>{experience.imageId}</td>
             </tr>
             <tr>
-              <th>From date time</th>
-              <td>{timeTag(experience.fromDateTime)}</td>
+              <th>From date</th>
+              <td>{experience.fromDate}</td>
             </tr>
             <tr>
-              <th>To date time</th>
-              <td>{timeTag(experience.toDateTime)}</td>
+              <th>To date</th>
+              <td>{experience.toDate}</td>
             </tr>
             <tr>
               <th>Location</th>

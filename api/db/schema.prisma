@@ -62,16 +62,16 @@ model Skill {
 }
 
 model Experience {
-  id           Int       @id @default(autoincrement())
-  title        String?
-  image        Image?    @relation(fields: [imageId], references: [id])
-  imageId      Int?
-  fromDateTime DateTime?
-  toDateTime   DateTime?
-  location     String?
-  description  String?
-  percent      Int?
-  category     String?
-  active       Boolean
-  sort         Int       @default(0)
+  id          Int     @id @default(autoincrement())
+  title       String?
+  image       Image?  @relation(fields: [imageId], references: [id])
+  imageId     Int?
+  fromDate    String?
+  toDate      String?
+  location    String?
+  description String?
+  percent     Int?
+  category    String?
+  active      Boolean
+  sort        Int     @default(0)
 }

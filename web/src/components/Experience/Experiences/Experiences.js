@@ -3,7 +3,7 @@ import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import { QUERY } from 'src/components/Experience/ExperiencesCell'
-import { checkboxInputTag, timeTag, truncate } from 'src/lib/formatters'
+import { checkboxInputTag, truncate } from 'src/lib/formatters'
 
 const DELETE_EXPERIENCE_MUTATION = gql`
   mutation DeleteExperienceMutation($id: Int!) {
@@ -42,8 +42,8 @@ const ExperiencesList = ({ experiences }) => {
             <th>Id</th>
             <th>Title</th>
             <th>Image id</th>
-            <th>From date time</th>
-            <th>To date time</th>
+            <th>From date</th>
+            <th>To date</th>
             <th>Location</th>
             <th>Description</th>
             <th>Percent</th>
@@ -59,8 +59,8 @@ const ExperiencesList = ({ experiences }) => {
               <td>{truncate(experience.id)}</td>
               <td>{truncate(experience.title)}</td>
               <td>{truncate(experience.imageId)}</td>
-              <td>{timeTag(experience.fromDateTime)}</td>
-              <td>{timeTag(experience.toDateTime)}</td>
+              <td>{truncate(experience.fromDate)}</td>
+              <td>{truncate(experience.toDate)}</td>
               <td>{truncate(experience.location)}</td>
               <td>{truncate(experience.description)}</td>
               <td>{truncate(experience.percent)}</td>

@@ -5,16 +5,9 @@ import {
   Label,
   TextField,
   NumberField,
-  DatetimeLocalField,
   CheckboxField,
   Submit,
 } from '@redwoodjs/forms'
-
-const formatDatetime = (value) => {
-  if (value) {
-    return value.replace(/:\d{2}\.\d{3}\w/, '')
-  }
-}
 
 const ExperienceForm = (props) => {
   const onSubmit = (data) => {
@@ -66,38 +59,38 @@ const ExperienceForm = (props) => {
         <FieldError name="imageId" className="rw-field-error" />
 
         <Label
-          name="fromDateTime"
+          name="fromDate"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          From date time
+          From date
         </Label>
 
-        <DatetimeLocalField
-          name="fromDateTime"
-          defaultValue={formatDatetime(props.experience?.fromDateTime)}
+        <TextField
+          name="fromDate"
+          defaultValue={props.experience?.fromDate}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
 
-        <FieldError name="fromDateTime" className="rw-field-error" />
+        <FieldError name="fromDate" className="rw-field-error" />
 
         <Label
-          name="toDateTime"
+          name="toDate"
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          To date time
+          To date
         </Label>
 
-        <DatetimeLocalField
-          name="toDateTime"
-          defaultValue={formatDatetime(props.experience?.toDateTime)}
+        <TextField
+          name="toDate"
+          defaultValue={props.experience?.toDate}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
         />
 
-        <FieldError name="toDateTime" className="rw-field-error" />
+        <FieldError name="toDate" className="rw-field-error" />
 
         <Label
           name="location"

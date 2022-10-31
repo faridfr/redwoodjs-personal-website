@@ -8,8 +8,8 @@ export const QUERY = gql`
       id
       title
       imageId
-      fromDateTime
-      toDateTime
+      fromDate
+      toDate
       location
       description
       percent

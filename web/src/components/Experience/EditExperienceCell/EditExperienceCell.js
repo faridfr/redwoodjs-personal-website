@@ -11,8 +11,8 @@ export const QUERY = gql`
       id
       title
       imageId
-      fromDateTime
-      toDateTime
+      fromDate
+      toDate
       location
       description
       percent
@@ -28,8 +28,8 @@ const UPDATE_EXPERIENCE_MUTATION = gql`
       id
       title
       imageId
-      fromDateTime
-      toDateTime
+      fromDate
+      toDate
       location
       description
       percent

@@ -4,8 +4,8 @@ export const schema = gql`
     title: String
     image: Image
     imageId: Int
-    fromDateTime: DateTime
-    toDateTime: DateTime
+    fromDate: String
+    toDate: String
     location: String
     description: String
     percent: Int
@@ -22,8 +22,8 @@ export const schema = gql`
   input CreateExperienceInput {
     title: String
     imageId: Int
-    fromDateTime: DateTime
-    toDateTime: DateTime
+    fromDate: String
+    toDate: String
     location: String
     description: String
     percent: Int
@@ -35,8 +35,8 @@ export const schema = gql`
   input UpdateExperienceInput {
     title: String
     imageId: Int
-    fromDateTime: DateTime
-    toDateTime: DateTime
+    fromDate: String
+    toDate: String
     location: String
     description: String
     percent: Int
