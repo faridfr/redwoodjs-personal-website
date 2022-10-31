@@ -31,3 +31,11 @@ model Setting {
   key  String?
   value String?
 }
+
+model Image {
+  id    Int     @id @default(autoincrement())
+  image_url String?
+  background_position String?
+  active Boolean
+  sort Int @default(0)
+}
