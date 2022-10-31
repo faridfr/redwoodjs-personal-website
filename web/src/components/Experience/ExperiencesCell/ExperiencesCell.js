@@ -7,7 +7,6 @@ export const QUERY = gql`
     experiences {
       id
       title
-      imageId
       fromDate
       toDate
       location

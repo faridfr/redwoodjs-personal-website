@@ -2,8 +2,6 @@ export const schema = gql`
   type Experience {
     id: Int!
     title: String
-    image: Image
-    imageId: Int
     fromDate: String
     toDate: String
     location: String
@@ -12,6 +10,7 @@ export const schema = gql`
     category: String
     active: Boolean!
     sort: Int!
+    ImagesOnExperiences: [ImagesOnExperiences]!
   }
 
   type Query {
@@ -21,7 +20,6 @@ export const schema = gql`
 
   input CreateExperienceInput {
     title: String
-    imageId: Int
     fromDate: String
     toDate: String
     location: String
@@ -34,7 +32,6 @@ export const schema = gql`
 
   input UpdateExperienceInput {
     title: String
-    imageId: Int
     fromDate: String
     toDate: String
     location: String

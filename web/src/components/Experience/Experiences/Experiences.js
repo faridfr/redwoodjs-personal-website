@@ -41,7 +41,6 @@ const ExperiencesList = ({ experiences }) => {
           <tr>
             <th>Id</th>
             <th>Title</th>
-            <th>Image id</th>
             <th>From date</th>
             <th>To date</th>
             <th>Location</th>
@@ -58,7 +57,6 @@ const ExperiencesList = ({ experiences }) => {
             <tr key={experience.id}>
               <td>{truncate(experience.id)}</td>
               <td>{truncate(experience.title)}</td>
-              <td>{truncate(experience.imageId)}</td>
               <td>{truncate(experience.fromDate)}</td>
               <td>{truncate(experience.toDate)}</td>
               <td>{truncate(experience.location)}</td>

@@ -48,10 +48,6 @@ const Experience = ({ experience }) => {
               <td>{experience.title}</td>
             </tr>
             <tr>
-              <th>Image id</th>
-              <td>{experience.imageId}</td>
-            </tr>
-            <tr>
               <th>From date</th>
               <td>{experience.fromDate}</td>
             </tr>

@@ -9,7 +9,7 @@ export const schema = gql`
     User: [User]!
     Education: [Education]!
     Skill: [Skill]!
-    Experience: [Experience]!
+    ImagesOnExperiences: [ImagesOnExperiences]!
   }
 
   type Query {

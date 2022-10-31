@@ -39,7 +39,9 @@ export const Image = {
   Skill: (_obj, { root }) => {
     return db.image.findUnique({ where: { id: root?.id } }).Skill()
   },
-  Experience: (_obj, { root }) => {
-    return db.image.findUnique({ where: { id: root?.id } }).Experience()
+  ImagesOnExperiences: (_obj, { root }) => {
+    return db.image
+      .findUnique({ where: { id: root?.id } })
+      .ImagesOnExperiences()
   },
 }

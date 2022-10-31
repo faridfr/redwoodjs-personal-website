@@ -42,23 +42,6 @@ const ExperienceForm = (props) => {
         <FieldError name="title" className="rw-field-error" />
 
         <Label
-          name="imageId"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Image id
-        </Label>
-
-        <NumberField
-          name="imageId"
-          defaultValue={props.experience?.imageId}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-        />
-
-        <FieldError name="imageId" className="rw-field-error" />
-
-        <Label
           name="fromDate"
           className="rw-label"
           errorClassName="rw-label rw-label-error"

@@ -30,7 +30,9 @@ export const deleteExperience = ({ id }) => {
 }
 
 export const Experience = {
-  image: (_obj, { root }) => {
-    return db.experience.findUnique({ where: { id: root?.id } }).image()
+  ImagesOnExperiences: (_obj, { root }) => {
+    return db.experience
+      .findUnique({ where: { id: root?.id } })
+      .ImagesOnExperiences()
   },
 }

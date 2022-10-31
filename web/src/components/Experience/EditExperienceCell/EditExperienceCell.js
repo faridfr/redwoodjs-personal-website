@@ -10,7 +10,6 @@ export const QUERY = gql`
     experience: experience(id: $id) {
       id
       title
-      imageId
       fromDate
       toDate
       location
@@ -27,7 +26,6 @@ const UPDATE_EXPERIENCE_MUTATION = gql`
     updateExperience(id: $id, input: $input) {
       id
       title
-      imageId
       fromDate
       toDate
       location
