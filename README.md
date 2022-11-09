@@ -1,7 +1,5 @@
 
-<br/>
 <h1 align="center">
-
 <br/><br/>
 <img  src="https://raw.githubusercontent.com/faridfr/react-personal-website/master/public/github/readme.png">
 <br/>
