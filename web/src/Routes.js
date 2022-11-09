@@ -26,23 +26,11 @@ const Routes = () => {
         <Route path="/images-on-experienceses/{id:Int}" page={ImagesOnExperiencesImagesOnExperiencesPage} name="imagesOnExperiences" />
         <Route path="/images-on-experienceses" page={ImagesOnExperiencesImagesOnExperiencesesPage} name="imagesOnExperienceses" />
       </Set>
-      <Set wrap={ScaffoldLayout} title="Experiences" titleTo="experiences" buttonLabel="New Experience" buttonTo="newExperience">
-      </Set>
       <Set wrap={ScaffoldLayout} title="Images" titleTo="images" buttonLabel="New Image" buttonTo="newImage">
         <Route path="/images/new" page={ImageNewImagePage} name="newImage" />
         <Route path="/images/{id:Int}/edit" page={ImageEditImagePage} name="editImage" />
         <Route path="/images/{id:Int}" page={ImageImagePage} name="image" />
         <Route path="/images" page={ImageImagesPage} name="images" />
-      </Set>
-      <Set wrap={ScaffoldLayout} title="ImagesOnExperienceses" titleTo="imagesOnExperienceses" buttonLabel="New ImagesOnExperiences" buttonTo="newImagesOnExperiences">
-      </Set>
-      <Set wrap={ScaffoldLayout} title="Experiences" titleTo="experiences" buttonLabel="New Experience" buttonTo="newExperience">
-      </Set>
-      <Set wrap={ScaffoldLayout} title="Experiences" titleTo="experiences" buttonLabel="New Experience" buttonTo="newExperience">
-      </Set>
-      <Set wrap={ScaffoldLayout} title="Images" titleTo="images" buttonLabel="New Image" buttonTo="newImage">
-      </Set>
-      <Set wrap={ScaffoldLayout} title="Experiences" titleTo="experiences" buttonLabel="New Experience" buttonTo="newExperience">
       </Set>
       <Set wrap={ScaffoldLayout} title="Experiences" titleTo="experiences" buttonLabel="New Experience" buttonTo="newExperience"></Set>
       <Set wrap={ScaffoldLayout} title="Experiences" titleTo="experiences" buttonLabel="New Experience" buttonTo="newExperience"></Set>
@@ -64,12 +52,6 @@ const Routes = () => {
         <Route path="/educations/{id:Int}" page={EducationEducationPage} name="education" />
         <Route path="/educations" page={EducationEducationsPage} name="educations" />
       </Set>
-      <Set wrap={ScaffoldLayout} title="Users" titleTo="users" buttonLabel="New User" buttonTo="newUser"></Set>
-      <Set wrap={ScaffoldLayout} title="Images" titleTo="images" buttonLabel="New Image" buttonTo="newImage">
-      </Set>
-      <Set wrap={ScaffoldLayout} title="Images" titleTo="images" buttonLabel="New Image" buttonTo="newImage"></Set>
-      <Set wrap={ScaffoldLayout} title="Skills" titleTo="skills" buttonLabel="New Skill" buttonTo="newSkill"></Set>
-      <Set wrap={ScaffoldLayout} title="Images" titleTo="images" buttonLabel="New Image" buttonTo="newImage"></Set>
       <Set wrap={ScaffoldLayout} title="Settings" titleTo="settings" buttonLabel="New Setting" buttonTo="newSetting">
         <Route path="/settings/new" page={SettingNewSettingPage} name="newSetting" />
         <Route path="/settings/{id:Int}/edit" page={SettingEditSettingPage} name="editSetting" />
