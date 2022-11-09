@@ -35,12 +35,7 @@
 yarn install
 ```
 
-- Try build before serve your app
+- Then run your project
 ```javascript
-yarn rw build
-```
-
-- Then serve your project
-```javascript
-yarn rw serve
+yarn rw dev
 ```
